@@ -234,7 +234,9 @@ function Header() {
                 >
                   {item.category}
                 </Link>
+                
               ))}
+               <Link to={`/services`}>Servis</Link>
             </nav>
           </div>
         </div>
