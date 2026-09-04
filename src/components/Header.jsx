@@ -216,6 +216,7 @@ function Header() {
                   </Link>
                 </li>
               ))}
+               <Link  className="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition" to={`/services`}>Servis</Link>
             </ul>
           </div>
         </div>
