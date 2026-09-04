@@ -43,7 +43,7 @@ function Footer() {
           <div>
             <h3 className="text-base font-bold text-gray-900 mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><span>All services</span></li>
+              <li><Link to={`/services`}>Servis</Link></li>
               <li><span>Trade In</span></li>
               <li><span>Installments & Credit</span></li>
               <li><span>Returns & Warranty</span></li>
