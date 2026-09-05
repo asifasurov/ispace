@@ -12,7 +12,6 @@ function DetailPage() {
   const { mehsul } = useContext(DATA);
   const { addBasket } = useContext(BASKET);
 
-  // Məhsulu slug və ya id üzrə axtarırıq
   const product = mehsul?.find(
     (item) => String(item.id) === String(paramValue) || item.slug === paramValue
   );

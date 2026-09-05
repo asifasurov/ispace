@@ -13,12 +13,10 @@ function Basketcontext({ children }) {
     }
   });
 
-  // 2. Səbət hər dəfə dəyişdikdə LocalStorage-i yeniləyirik
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
 
-  // 3. Səbətə məhsul əlavə etmək (Həm obyekt, həm tək-tək argument dəstəkləyir)
   const addBasket = (idOrProduct, title, price, image, category) => {
     const product =
       typeof idOrProduct === "object" && idOrProduct !== null
@@ -38,7 +36,6 @@ function Basketcontext({ children }) {
     });
   };
 
-  // 4. Məhsulun sayını 1 vahid azaltmaq
   const decreaseQuantity = (id) => {
     setBasket((prev) =>
       prev
@@ -49,23 +46,19 @@ function Basketcontext({ children }) {
     );
   };
 
-  // 5. Məhsulu səbətdən tamamilə silmək
   const removeFromBasket = (id) => {
     setBasket((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // 6. Səbəti tam təmizləmək
   const clearBasket = () => {
     setBasket([]);
   };
 
-  // 7. Ümumi məbləğ hesablanması
   const totalPrice = basket.reduce(
     (acc, item) => acc + (Number(item.price) || 0) * (item.count || 1),
     0
   );
 
-  // 8. Səbətdəki ümumi məhsul sayısı (Badge üçün)
   const totalCount = basket.reduce(
     (acc, item) => acc + (item.count || 1),
     0
@@ -74,15 +67,7 @@ function Basketcontext({ children }) {
   return (
     <BASKET.Provider
       value={{
-        basket,
-        setBasket,
-        addBasket,
-        decreaseQuantity,
-        removeFromBasket,
-        clearBasket,
-        totalPrice,
-        totalCount,
-      }}
+        basket, setBasket, addBasket, decreaseQuantity,removeFromBasket, clearBasket, totalPrice, totalCount,}}
     >
       {children}
     </BASKET.Provider>

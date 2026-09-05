@@ -111,7 +111,7 @@ function Footer() {
         {/* Alt Hissə */}
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between gap-8 items-start md:items-end">
           
-          <div className="w-full md:max-w-sm space-y-3">
+          {/* <div className="w-full md:max-w-sm space-y-3">
             <h4 className="text-sm font-semibold text-gray-700">Subscribe to our Emails</h4>
             <form onSubmit={(e) => e.preventDefault()} className="flex border border-gray-900 rounded-md overflow-hidden focus-within:ring-1 focus-within:ring-gray-900">
               <input
@@ -130,7 +130,7 @@ function Footer() {
                 I agree to the <span className="underline">processing of personal data</span>, and <span className="underline">I understand the Terms and Conditions of Use</span>.
               </span>
             </label>
-          </div>
+          </div> */}
 
           <div className="flex flex-col items-start md:items-end gap-6 w-full md:w-auto">
             <div className="flex items-center gap-4 text-gray-800 text-lg">
